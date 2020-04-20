@@ -3,6 +3,8 @@ const makeRunOn = function(str) {
 
   let newStr = '';
 
+  // // return newStr;
+
   let newStrWithCommas = '';
 
   for (let i = 0; i < str.length; i++) {
@@ -12,10 +14,9 @@ const makeRunOn = function(str) {
       newStr += str[i];
     }
   }
-  // let newStrEndsWith = newStr[newStr.length - 1];
-  // if (newStrEndsWith.endsWith(',')) {
-  //   newStrEndsWith = newStrEd.replace(',', '.');
-  // }
+  if (newStr.endsWith(',')) {
+    newStr = newStr.replace(',', '.');
+  }
 
   return newStr;
 };
@@ -89,12 +90,8 @@ const Faqtory = function (question) {
         this.questions.push(question);
       },
 
-      answerQuestion: function(id, answer) {
-        for (i = 0; i < this.questions.length; i++) {
-          if (this.questions[i].id === id) {
-            this.questions[i].text += answer;
-          }
-        }
+      answerQuestion: function(answer) {
+
       }
   };
 

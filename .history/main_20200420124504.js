@@ -12,12 +12,12 @@ const makeRunOn = function(str) {
       newStr += str[i];
     }
   }
-  // let newStrEndsWith = newStr[newStr.length - 1];
-  // if (newStrEndsWith.endsWith(',')) {
-  //   newStrEndsWith = newStrEd.replace(',', '.');
-  // }
+  let newStrEndsWith = newStr[newStr.length - 1];
+  if (newStrEndsWith.endsWith(',')) {
+    newStrEndsWith = newStrEndsWith.replace(',', '.');
+  }
 
-  return newStr;
+  return newStr.slice(0, newStr.length -1) + '.';
 };
 
 

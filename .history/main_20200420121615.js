@@ -3,6 +3,8 @@ const makeRunOn = function(str) {
 
   let newStr = '';
 
+  // // return newStr;
+
   let newStrWithCommas = '';
 
   for (let i = 0; i < str.length; i++) {
@@ -12,13 +14,12 @@ const makeRunOn = function(str) {
       newStr += str[i];
     }
   }
-  // let newStrEndsWith = newStr[newStr.length - 1];
-  // if (newStrEndsWith.endsWith(',')) {
-  //   newStrEndsWith = newStrEd.replace(',', '.');
-  // }
+  if (newStr.endsWith(',')) {
+    newStr = newStr.replace(',', '.');
+  }
 
   return newStr;
-};
+}
 
 
 
@@ -28,7 +29,7 @@ const stringOut = function(str) {
   let spacedStr = newStr.split('').join(' ');
 
   return spacedStr;
-};
+}
 
 
 const nightOwls = function(people) {
@@ -65,41 +66,33 @@ const getToBed = function(people) {
       }
   }
   return newArray;
-};
+}
 
 const findIndices = function (ArrayParam, funcCallback) {
   const result = [];
   for (let i = 0; i < ArrayParam.length; i++) {
     if (funcCallback(ArrayParam[i]) === true) {
-      result.push(ArrayParam[i].indexOf(ArrayParam[i]));
+      result.push(funcCallback(ArrayParam[i]));
     }
   }
   return result;
-};
+}
 
 const Faqtory = function (question) {
   return {
-      questions: [],
+    questions: [],
 
-      addQuestion: function(question) {
+    addQuestion: function(question = 'unanswered') {
       
-        question = {text: question,
-                    answered: false,
-                    id: 0};
-        this.questions.push(question);
-      },
+      question = {text: question,
+                  answered: false,
+                  };
+      this.questions.push(question);
 
-      answerQuestion: function(id, answer) {
-        for (i = 0; i < this.questions.length; i++) {
-          if (this.questions[i].id === id) {
-            this.questions[i].text += answer;
-          }
-        }
-      }
-  };
+    }
 
-  };
-
+  }
+}
 
 if (typeof makeRunOn === 'undefined') {
   makeRunOn = undefined;

@@ -12,10 +12,9 @@ const makeRunOn = function(str) {
       newStr += str[i];
     }
   }
-  // let newStrEndsWith = newStr[newStr.length - 1];
-  // if (newStrEndsWith.endsWith(',')) {
-  //   newStrEndsWith = newStrEd.replace(',', '.');
-  // }
+  if (newStr.endsWith(',')) {
+    newStr = newStr.replace(',', '.');
+  }
 
   return newStr;
 };

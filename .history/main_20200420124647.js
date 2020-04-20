@@ -14,10 +14,10 @@ const makeRunOn = function(str) {
   }
   // let newStrEndsWith = newStr[newStr.length - 1];
   // if (newStrEndsWith.endsWith(',')) {
-  //   newStrEndsWith = newStrEd.replace(',', '.');
+  //   newStrEndsWith = newStrEndsWith.replace(',', '.');
   // }
 
-  return newStr;
+  return newStr.slice(0, newStr.length -0) + '.';
 };
 
 
