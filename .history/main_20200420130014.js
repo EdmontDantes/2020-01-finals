@@ -3,6 +3,7 @@ const makeRunOn = function(str) {
 
   let newStr = '';
 
+  let newStrWithCommas = '';
 
   for (let i = 0; i < str.length; i++) {
     if(str[i] === '.') {
@@ -12,16 +13,15 @@ const makeRunOn = function(str) {
     }
   }
 
-  let dottedStr = '';
-  if((newStr.charAt(newStr.length - 1)) === '.') {
-    dottedStr = newStr.slice(0, newStr.length - 1) + '.';
+  if((newStr.length - 1) === '.') {
+    let dottedStr = newStr.slice(0, newStr.length - 1) + '.';
   }
   // let newStrEndsWith = newStr[newStr.length - 1];
   // if (newStrEndsWith.endsWith(',')) {
   //   newStrEndsWith = newStrEd.replace(',', '.');
   // }
 
-  return newStr;
+  return ;
 };
 
 

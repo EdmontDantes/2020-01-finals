@@ -21,7 +21,7 @@ const makeRunOn = function(str) {
   //   newStrEndsWith = newStrEd.replace(',', '.');
   // }
 
-  return newStr;
+  return dottedStr;
 };
 
 

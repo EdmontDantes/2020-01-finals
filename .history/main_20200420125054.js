@@ -3,6 +3,7 @@ const makeRunOn = function(str) {
 
   let newStr = '';
 
+  let newStrWithCommas = '';
 
   for (let i = 0; i < str.length; i++) {
     if(str[i] === '.') {
@@ -11,16 +12,11 @@ const makeRunOn = function(str) {
       newStr += str[i];
     }
   }
-
-  let dottedStr = '';
-  if((newStr.charAt(newStr.length - 1)) === '.') {
-    dottedStr = newStr.slice(0, newStr.length - 1) + '.';
-  }
   // let newStrEndsWith = newStr[newStr.length - 1];
   // if (newStrEndsWith.endsWith(',')) {
   //   newStrEndsWith = newStrEd.replace(',', '.');
   // }
-
+  
   return newStr;
 };
 
@@ -95,7 +91,7 @@ const Faqtory = function (question) {
 
       answerQuestion: function(id, answer) {
         for (i = 0; i < this.questions.length; i++) {
-          if (this.questions[i].id === id && this.questions.answered === false) {
+          if (this.questions[i].id === id) {
             this.questions[i].text += answer;
           }
         }

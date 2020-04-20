@@ -14,7 +14,7 @@ const makeRunOn = function(str) {
 
   let dottedStr = '';
   if((newStr.charAt(newStr.length - 1)) === '.') {
-    dottedStr = newStr.slice(0, newStr.length - 1) + '.';
+    dottedStr = nqewStr.slice(0, newStr.length - 1) + '.';
   }
   // let newStrEndsWith = newStr[newStr.length - 1];
   // if (newStrEndsWith.endsWith(',')) {
